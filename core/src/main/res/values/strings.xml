@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="manga_thumbnail">Manga Thumbnail</string>
+    <string name="manga_title">Manga Title</string>
+    <string name="manga_type">Type</string>
+</resources>

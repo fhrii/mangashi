@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">MangaShi</string>
+    <string name="search">Search</string>
+    <string name="favorite">Favorite</string>
+    <string name="error">Error</string>
+    <string name="search_text">Searching manga</string>
+    <string name="error_text">There is something wrong</string>
+    <string name="add_manga">Adding manga to database</string>
+    <string name="add_favorite">Adding manga to favorite</string>
+    <string name="remove_favorite">Removing manga from favorite</string>
+    <string name="empty">Empty</string>
+    <string name="status">Status</string>
+    <string name="author">Author</string>
+    <string name="synopsis">Synopsis</string>
+    <string name="title_favorite">Favorite</string>
+</resources>

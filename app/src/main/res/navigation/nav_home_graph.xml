@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_home_graph"
+    app:startDestination="@id/mainHomeFragment">
+
+    <fragment
+        android:id="@+id/mainHomeFragment"
+        android:name="org.fahrii.mangashi.ui.home.main.MainHomeFragment"
+        android:label="fragment_main_home"
+        tools:layout="@layout/fragment_main_home" >
+        <action
+            android:id="@+id/action_mainHomeFragment_to_searchHomeFragment"
+            app:destination="@id/searchHomeFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_mainHomeFragment_to_detailActivity"
+            app:destination="@id/detailActivity" />
+        <action
+            android:id="@+id/action_mainHomeFragment_to_favoriteHomeFragment"
+            app:destination="@id/favoriteHomeFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchHomeFragment"
+        android:name="org.fahrii.mangashi.ui.home.search.SearchHomeFragment"
+        android:label="fragment_search_home"
+        tools:layout="@layout/fragment_search_home" >
+        <action
+            android:id="@+id/action_searchHomeFragment_to_detailActivity"
+            app:destination="@id/detailActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/detailActivity"
+        android:name="org.fahrii.mangashi.ui.detail.DetailActivity"
+        android:label="activity_detail"
+        tools:layout="@layout/activity_detail" >
+        <argument
+            android:name="manga"
+            app:argType="org.fahrii.mangashi.core.domain.model.Manga" />
+    </activity>
+    <fragment
+        android:id="@+id/favoriteHomeFragment"
+        android:name="org.fahrii.mangashi.favorite.ui.home.FavoriteHomeFragment"
+        app:moduleName="MangaShi.favorite"
+        android:label="fragment_favorite_home"
+        tools:layout="@layout/fragment_favorite_home" >
+        <action
+            android:id="@+id/action_favoriteHomeFragment_to_detailActivity"
+            app:destination="@id/detailActivity" />
+    </fragment>
+</navigation>
