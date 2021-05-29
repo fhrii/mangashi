@@ -1,6 +1,6 @@
 # MangaShi
 
-This android application is used for fulfill the Menjadi Developer Android Expert's First Capstone Project on Dicoding
+This android application is used to fulfill the Menjadi Developer Android Expert's First Capstone Project on Dicoding
 
 ## Screenshot
 
