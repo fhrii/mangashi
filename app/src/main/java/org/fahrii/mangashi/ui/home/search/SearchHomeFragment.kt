@@ -42,19 +42,6 @@ class SearchHomeFragment : Fragment() {
 
     private val mCompositeDisposable = CompositeDisposable()
 
-    companion object {
-        private const val TAG = "SearchHomeFragment"
-
-        @StringRes
-        private const val ADD_MANGA_TEXT = R.string.add_manga
-
-        @StringRes
-        private const val SEARCH_MANGA_TEXT = R.string.search_text
-
-        @StringRes
-        private const val ERROR_TEXT = R.string.error_text
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -77,7 +64,7 @@ class SearchHomeFragment : Fragment() {
     }
 
     private fun setLayout() {
-        binding.rvSearch.layoutManager = LinearLayoutManager(this.context)
+        binding.rvSearch.layoutManager = LinearLayoutManager(requireActivity())
         binding.rvSearch.adapter = adapter
         adapter.onItemClicked = object : ItemMangaAdapter.OnItemClicked {
             override fun setOnItemClicked(manga: Manga) {
@@ -163,5 +150,18 @@ class SearchHomeFragment : Fragment() {
 
             mCompositeDisposable.add(searchStream)
         }
+    }
+
+    companion object {
+        private const val TAG = "SearchHomeFragment"
+
+        @StringRes
+        private const val ADD_MANGA_TEXT = R.string.add_manga
+
+        @StringRes
+        private const val SEARCH_MANGA_TEXT = R.string.search_text
+
+        @StringRes
+        private const val ERROR_TEXT = R.string.error_text
     }
 }

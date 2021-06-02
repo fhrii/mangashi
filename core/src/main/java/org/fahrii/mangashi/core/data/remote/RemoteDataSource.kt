@@ -72,7 +72,7 @@ class RemoteDataSource @Inject constructor(private val apiService: ApiService) {
             .doFinally { client.unsubscribeOn(Schedulers.computation()) }
             .subscribe({ response ->
                 if (!response.status) {
-                    resultData.onNext(ApiResponse.ERROR("Server Error"))
+                    resultData.onNext(ApiResponse.ERROR(response.message))
                     return@subscribe
                 }
 

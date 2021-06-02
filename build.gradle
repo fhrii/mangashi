@@ -49,6 +49,11 @@ ext {
     rxbinding_version = '3.1.0'
     shimmer_version = '0.5.0'
     room_version = '2.3.0'
+    sql_cipher_version = '4.4.0'
+    sqlite_version = '2.1.0'
+    leakcanary_version= '2.7'
     retrofit_version = '2.9.0'
     logging_interceptor_version = '4.9.1'
+    mockito_version = '3.10.0'
+    core_testing_version = '2.1.0'
 }

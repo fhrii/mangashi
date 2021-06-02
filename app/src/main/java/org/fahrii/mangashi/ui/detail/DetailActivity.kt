@@ -30,28 +30,6 @@ class DetailActivity : AppCompatActivity() {
 
     private val mCompositeDisposable = CompositeDisposable()
 
-    companion object {
-        private const val TAG = "DetailActivity"
-
-        @StringRes
-        private const val ADD_MANGA_TEXT = R.string.add_manga
-
-        @StringRes
-        private const val ERROR_TEXT = R.string.error_text
-
-        @StringRes
-        private const val ADD_FAVORITE_TEXT = R.string.add_favorite
-
-        @StringRes
-        private const val REMOVE_FAVORITE_TEXT = R.string.remove_favorite
-
-        @DrawableRes
-        private const val FAVORITE_TRUE_ICON = R.drawable.ic_favorite_red
-
-        @DrawableRes
-        private const val FAVORITE_FALSE_ICON = R.drawable.ic_favorite_border_red
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setLayout()
@@ -128,5 +106,27 @@ class DetailActivity : AppCompatActivity() {
 
     private fun setFavoriteIcon(state: Boolean) {
         binding.btnFavorite.setImageResource(if (state) FAVORITE_TRUE_ICON else FAVORITE_FALSE_ICON)
+    }
+
+    companion object {
+        private const val TAG = "DetailActivity"
+
+        @StringRes
+        private const val ADD_MANGA_TEXT = R.string.add_manga
+
+        @StringRes
+        private const val ERROR_TEXT = R.string.error_text
+
+        @StringRes
+        private const val ADD_FAVORITE_TEXT = R.string.add_favorite
+
+        @StringRes
+        private const val REMOVE_FAVORITE_TEXT = R.string.remove_favorite
+
+        @DrawableRes
+        private const val FAVORITE_TRUE_ICON = R.drawable.ic_favorite_red
+
+        @DrawableRes
+        private const val FAVORITE_FALSE_ICON = R.drawable.ic_favorite_border_red
     }
 }
