@@ -1,4 +1,5 @@
 # MangaShi
+[![fhrii](https://circleci.com/gh/fhrii/mangashi.svg?style=svg)](https://circleci.com/gh/fhrii/mangashi)
 
 This android application is used to fulfill the Menjadi Developer Android Expert's Last Capstone Project on Dicoding
 
